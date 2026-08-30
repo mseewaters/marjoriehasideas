@@ -1,6 +1,12 @@
+const md = require("markdown-it")();
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
+
+  eleventyConfig.addFilter("markdown", (content) => {
+    return md.render(content);
+  });
 
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return new Date(dateObj)

@@ -19,7 +19,7 @@ eleventyComputed:
   <div class="meta">stage: {{ stamp.stage }}</div>
   <div class="content">
     <p><em>{{ stamp.blurb }}</em></p>
-    <p>{{ stamp.backstory }}</p>
+    <p>{{ stamp.backstory | safe }}</p>
   </div>
   {% if stamp.url %}
     <a class="external-link" href="{{ stamp.url }}">visit the live site →</a>

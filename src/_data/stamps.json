@@ -14,7 +14,7 @@
     "top": "0px",
     "left": "4%",
     "blurb": "weekly NFL spread predictions from a proprietary model",
-    "backstory": "torturing easy-to-get historical game data until it gives up its secrets and makes the NFL feel a little less random is a dirty little pleasure of mine. two years in, up $50 on a $100 stake.",
+    "backstory": "Torturing easy-to-get historical game data until it gives up its secrets and makes the NFL feel a little less random is a dirty little pleasure of mine. Two years in, up $50 on a $100 stake.",
     "url": "https://goalline.marjoriehasideas.com"
   },
   {
@@ -28,7 +28,7 @@
       "fit": "cover",
       "position": "50% 18%"
     },
-    "color": "#E6FF00",
+    "color": "#00BFFF",
     "ringColor": "#00BFFF",
     "bgColor": "#40454B",
     "top": "40px",
@@ -50,10 +50,26 @@
     "ringColor": "#1ca06c",
     "bgColor": "#09567D",
     "top": "170px",
-    "left": "12%",
+    "left": "15%",
     "blurb": "a no-ads, 7-day forecast that shows up in your inbox",
-    "backstory": "enter your zip code and pick a frequency — you get one plain email with a 7-day outlook and simple icons for good running days, plant-watering days, and freeze warnings. no app, no ads, no doomscrolling a radar map.",
+    "backstory": "Enter your zip code and pick a frequency — you get one plain email with a 7-day outlook and simple icons for good running days, plant-watering days, and freeze warnings. no app, no ads, no doomscrolling a radar map.",
     "url": "https://weather-ahead.com"
+  },
+    {
+    "slug": "cozy-mysteries",
+    "name": "Cozy Mysteries",
+    "stage": "idea",
+    "icon": {
+      "type": "image",
+      "src": "/img/logos/annonymous.png",
+      "scale": "76%"
+    },
+    "color": "#5b6ea8",
+    "top": "350px",
+    "left": "6%",
+    "blurb": "Murder, She Graphed",
+    "backstory": "We've all been there, watching a British mystery show, a guest character appears.  That nagging feeling, I know that face!  20 minutes of IMDb rabbit holes later...",
+    "url": ""
   },
   {
     "slug": "product-recommender",
@@ -67,13 +83,13 @@
     "color": "#4a6a5a",
     "top": "300px",
     "left": "38%",
-    "blurb": "because old people are picky and yet won't read reviews",
-    "backstory": "My parents sent their robot vacuum back five times before finding the right one.",
+    "blurb": "because sometimes shopping involves requirements docs",
+    "backstory": "My parents sent their robot vacuum back five times before finding the right one. Clearly, there is opportunity for better product recommendations for picky people with specific needs.",
     "url": ""
   },
   {
     "slug": "waters-edge",
-    "name": "Water's Edge",
+    "name": "Waters Edge",
     "stage": "idea",
     "icon": {
       "type": "image",
@@ -83,8 +99,8 @@
     "color": "#5b6ea8",
     "top": "190px",
     "left": "65%",
-    "blurb": "the renovation, documented",
-    "backstory": "so future-us remembers why we chose the tile.",
+    "blurb": "the renovation, imagined anddocumented",
+    "backstory": "So future-us remembers why we chose the tile. And that paint color.  And the wallpaper mural of \"Cartoon Chicken in a Hoodie\".",
     "url": ""
   }
 ]
