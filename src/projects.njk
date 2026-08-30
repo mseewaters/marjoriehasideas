@@ -1,0 +1,27 @@
+---
+layout: base.njk
+pagination:
+  data: stamps
+  size: 1
+  alias: stamp
+permalink: "/projects/{{ stamp.slug }}/"
+eleventyComputed:
+  title: "{{ stamp.name }}"
+---
+<div class="page">
+  <a class="back" href="/">← marjoriehasideas</a>
+  {% if stamp.icon.type == "image" %}
+    <span class="icon-badge project-icon"{% if stamp.colors %} style="background:linear-gradient(135deg, {{ stamp.colors.gradientStart }}, {{ stamp.colors.gradientEnd }});"{% endif %}>
+      <img src="{{ stamp.icon.src }}" alt="{{ stamp.name }} logo" style="object-fit:{{ stamp.icon.fit or 'contain' }}; object-position:{{ stamp.icon.position or 'center' }};">
+    </span>
+  {% endif %}
+  <h1>{{ stamp.name }}</h1>
+  <div class="meta">stage: {{ stamp.stage }}</div>
+  <div class="content">
+    <p><em>{{ stamp.blurb }}</em></p>
+    <p>{{ stamp.backstory }}</p>
+  </div>
+  {% if stamp.url %}
+    <a class="external-link" href="{{ stamp.url }}">visit the live site →</a>
+  {% endif %}
+</div>

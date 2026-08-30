@@ -1,0 +1,14 @@
+{
+  "name": "marjoriehasideas",
+  "version": "0.1.0",
+  "description": "marjoriehasideas.com - umbrella site for personal projects and blog",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "debug": "eleventy --serve --incremental"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}
