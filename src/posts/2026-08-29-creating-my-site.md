@@ -18,6 +18,6 @@ Last night I was putting the finishing touches on the MVP release of the front d
 
 And then I saw it.  **Marjorie Has Ideas.**
 
-This was the one.  I needed this domain.  I do have ideas, lots of ideas.  They aren't all good ideas, but some lead to some pretty interesting things.  I like to learn and explore hands on, to see what happens when ideas become real. Turns out, I also like apps built for me, by me, meeting my needs.
+This was the one.  I needed this domain.  I do have ideas, lots of ideas.  They aren't all good ideas, but some lead to some pretty interesting things. I like to learn and explore hands on, to see what happens when ideas become real. Turns out, I also like apps built for me, by me, meeting my needs.
 
 Here are the things that came from those ideas and some of the backstory behind them.  Some are in production, some are in progress, some are still just ideas waiting for the time, energy, and spark to get started.
