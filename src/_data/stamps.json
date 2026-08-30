@@ -18,6 +18,44 @@
     "url": "https://goalline.marjoriehasideas.com"
   },
   {
+    "slug": "finish-lines",
+    "name": "Finish Lines",
+    "stage": "production",
+    "icon": {
+      "type": "image",
+      "src": "/img/logos/finish-lines.png",
+      "scale": "88%",
+      "fit": "cover",
+      "position": "50% 18%"
+    },
+    "color": "#E6FF00",
+    "ringColor": "#00BFFF",
+    "bgColor": "#40454B",
+    "top": "40px",
+    "left": "40%",
+    "blurb": "my own run log — targets, progress, and the metrics that actually matter to me",
+    "backstory": "I use a commercial app for the guided runs themselves, but this is where I actually keep score: goals, progress against plan, longest run, rolling 7-day pace. the calendar of which days I ran is oddly satisfying — sometimes I open it just to look at it.",
+    "url": "https://finish-lines.net"
+  },
+  {
+    "slug": "weather-ahead",
+    "name": "Weather Ahead!",
+    "stage": "production",
+    "icon": {
+      "type": "image",
+      "src": "/img/logos/weather-ahead-inverted.png",
+      "scale": "75%"
+    },
+    "color": "#b8dbe9",
+    "ringColor": "#1ca06c",
+    "bgColor": "#09567D",
+    "top": "170px",
+    "left": "12%",
+    "blurb": "a no-ads, 7-day forecast that shows up in your inbox",
+    "backstory": "enter your zip code and pick a frequency — you get one plain email with a 7-day outlook and simple icons for good running days, plant-watering days, and freeze warnings. no app, no ads, no doomscrolling a radar map.",
+    "url": "https://weather-ahead.com"
+  },
+  {
     "slug": "product-recommender",
     "name": "Product Recommender",
     "stage": "in-progress",
@@ -48,43 +86,5 @@
     "blurb": "the renovation, documented",
     "backstory": "so future-us remembers why we chose the tile.",
     "url": ""
-  },
-  {
-    "slug": "weather-ahead",
-    "name": "Weather Ahead!",
-    "stage": "production",
-    "icon": {
-      "type": "image",
-      "src": "/img/logos/weather-ahead-inverted.png",
-      "scale": "75%"
-    },
-    "color": "#b8dbe9",
-    "ringColor": "#1ca06c",
-    "bgColor": "#09567D",
-    "top": "170px",
-    "left": "12%",
-    "blurb": "a no-ads, 7-day forecast that shows up in your inbox",
-    "backstory": "enter your zip code and pick a frequency — you get one plain email with a 7-day outlook and simple icons for good running days, plant-watering days, and freeze warnings. no app, no ads, no doomscrolling a radar map.",
-    "url": "https://weather-ahead.com"
-  },
-  {
-    "slug": "finish-lines",
-    "name": "Finish Lines",
-    "stage": "production",
-    "icon": {
-      "type": "image",
-      "src": "/img/logos/finish-lines.png",
-      "scale": "88%",
-      "fit": "cover",
-      "position": "50% 18%"
-    },
-    "color": "#E6FF00",
-    "ringColor": "#00BFFF",
-    "bgColor": "#40454B",
-    "top": "40px",
-    "left": "40%",
-    "blurb": "my own run log — targets, progress, and the metrics that actually matter to me",
-    "backstory": "I use a commercial app for the guided runs themselves, but this is where I actually keep score: goals, progress against plan, longest run, rolling 7-day pace. the calendar of which days I ran is oddly satisfying — sometimes I open it just to look at it.",
-    "url": "https://finish-lines.net"
   }
 ]

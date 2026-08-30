@@ -275,20 +275,85 @@ h1 a{
     height:auto;
     display:flex;
     flex-direction:column;
-    align-items:center;
+    align-items:flex-start;
+    gap:clamp(40px, 12vw, 56px);
   }
+
+  /* On narrow screens the absolutely-positioned desktop scatter can't work:
+     each stamp becomes a vertical unit — round badge on top, caption below
+     in normal flow so it never overlaps the disc or the next stamp. */
   .stamp{
-    position:static;
-    margin-bottom:44px;
+    position:relative;
+    /* cancel the desktop scatter coords set inline on each stamp */
+    top:auto !important;
+    left:auto !important;
+    width:min(149px, 62vw);
+    height:auto;
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    background:none;
+    border:none;
+    border-radius:0;
+    box-shadow:none;
+    transform:none;
   }
+  .stamp:hover{ transform:none; }
+  /* the inner dashed ring is rebuilt on the badge; the outer stage ring
+     (.stamp::before, styled per-stage above) is re-sized to hug the badge */
+  .stamp::after{ content:none; }
+  .stamp::before{
+    inset:auto;
+    top:-9px;
+    left:-9px;
+    right:-9px;
+    height:calc(min(149px, 62vw) + 18px);
+  }
+
+  /* the badge now carries the wax-disc look */
+  .stamp .icon-badge{
+    position:relative;
+    width:min(149px, 62vw);
+    height:min(149px, 62vw);
+    flex:0 0 auto;
+    background:var(--stamp-bg, var(--paper-2));
+    border:1px solid rgba(0,0,0,0.06);
+    box-shadow:
+      inset 0 2px 3px rgba(255,255,255,0.6),
+      inset 0 -3px 5px rgba(0,0,0,0.12),
+      0 1px 2px rgba(0,0,0,0.06);
+  }
+  .stamp .icon-badge img{
+    width:min(var(--icon-scale, 76%), 100%);
+    height:min(var(--icon-scale, 76%), 100%);
+  }
+  /* inner dashed ring, rebuilt inside the badge */
+  .stamp .icon-badge::after{
+    content:"";
+    position:absolute;
+    inset:9%;
+    border-radius:50%;
+    border:1.5px dashed currentColor;
+    opacity:0.6;
+  }
+
+  /* caption sits in normal flow under the badge, always visible (no hover on touch) */
   .stamp .tip{
     position:static;
     opacity:1;
     pointer-events:auto;
-    width:220px;
-    margin:12px auto 0;
+    width:min(300px, 82vw);
+    margin:16px 0 0;
     box-shadow:none;
     border:1px solid var(--rule);
   }
+
+  /* keep the whole-stamp link to the badge only, so the caption's own link stays clickable */
+  .stamp .stamp-link{
+    inset:0 0 auto 0;
+    height:min(149px, 62vw);
+  }
+
   .log-panel{ border-left:none; border-top:1px solid var(--rule); }
 }
