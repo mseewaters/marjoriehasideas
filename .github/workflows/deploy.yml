@@ -33,32 +33,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ vars.AWS_REGION }}
 
-      - name: Debug and sync site
+      - name: Sync site
         run: |
-          echo "AWS identity:"
-          aws sts get-caller-identity
-
-          echo ""
-          echo "Target bucket: ${{ vars.S3_BUCKET_NAME }}"
-          echo "AWS region: ${{ vars.AWS_REGION }}"
-
-          echo ""
-          echo "Bucket currently contains:"
-          aws s3 ls s3://${{ vars.S3_BUCKET_NAME }}/
-
-          echo ""
-          echo "Dry run:"
-          aws s3 sync _site/ s3://${{ vars.S3_BUCKET_NAME }} --dryrun
-
-          echo ""
-          echo "Actual sync:"
           aws s3 sync _site/ s3://${{ vars.S3_BUCKET_NAME }} \
             --delete \
             --cache-control "public,max-age=0,must-revalidate"
-
-          echo ""
-          echo "Bucket after sync:"
-          aws s3 ls s3://${{ vars.S3_BUCKET_NAME }}/
 
       - name: Invalidate CloudFront cache
         run: |
