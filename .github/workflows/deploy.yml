@@ -16,6 +16,15 @@ jobs:
       - run: npm ci
       - run: npx @11ty/eleventy   # builds to _site/
 
+      - name: Inspect build output
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Files:"
+          find . -maxdepth 3 -type f | sort
+          echo "_site contents:"
+          ls -la _site || true
+
       - uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
