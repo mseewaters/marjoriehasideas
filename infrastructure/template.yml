@@ -1,0 +1,102 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Description: Shared infrastructure for Marjorie Has Ideas
+
+Parameters:
+  Environment:
+    Type: String
+    AllowedValues:
+      - dev
+      - prod
+
+Resources:
+
+  MhiUserPool:
+    Type: AWS::Cognito::UserPool
+    Properties:
+      UserPoolName: !Sub mhi-users-${Environment}
+
+      UsernameAttributes:
+        - email
+
+      AutoVerifiedAttributes:
+        - email
+
+      Schema:
+        - Name: email
+          Required: true
+          Mutable: true
+
+        - Name: given_name
+          Required: true
+          Mutable: true
+
+        - Name: family_name
+          Required: true
+          Mutable: true
+
+      Policies:
+        PasswordPolicy:
+          MinimumLength: 8
+          RequireUppercase: true
+          RequireLowercase: true
+          RequireNumbers: true
+          RequireSymbols: false
+
+  GoalLinesWebClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      ClientName: !Sub goal-lines-web-${Environment}
+      UserPoolId: !Ref MhiUserPool
+
+      GenerateSecret: false
+
+      # The Goal Line app drives a custom in-app login modal via SRP
+      # (amazon-cognito-identity-js) rather than the Hosted UI, so it needs
+      # the SRP + refresh auth flows enabled explicitly. Sign-up, confirm and
+      # forgot-password are unauthenticated client calls and need no flag.
+      ExplicitAuthFlows:
+        - ALLOW_USER_SRP_AUTH
+        - ALLOW_REFRESH_TOKEN_AUTH
+
+      # Don't leak whether an email is registered on failed logins / lookups.
+      PreventUserExistenceErrors: ENABLED
+
+      AllowedOAuthFlowsUserPoolClient: true
+
+      AllowedOAuthFlows:
+        - code
+
+      AllowedOAuthScopes:
+        - openid
+        - email
+        - profile
+
+      SupportedIdentityProviders:
+        - COGNITO
+
+      CallbackURLs:
+        - !If
+          - IsProd
+          - https://goallines.marjoriehasideas.com/
+          - http://localhost:5173/
+
+      LogoutURLs:
+        - !If
+          - IsProd
+          - https://goallines.marjoriehasideas.com/
+          - http://localhost:5173/
+
+Conditions:
+  IsProd: !Equals [!Ref Environment, prod]
+
+Outputs:
+  UserPoolId:
+    Value: !Ref MhiUserPool
+
+  UserPoolArn:
+    Value: !GetAtt MhiUserPool.Arn
+
+  GoalLinesClientId:
+    Value: !Ref GoalLinesWebClient

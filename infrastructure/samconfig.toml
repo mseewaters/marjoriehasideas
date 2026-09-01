@@ -1,0 +1,31 @@
+version = 0.1
+
+[default.deploy.parameters]
+stack_name = "sam-app"
+resolve_s3 = true
+s3_prefix = "sam-app"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "Environment=\"dev\""
+image_repositories = []
+
+[dev.deploy.parameters]
+stack_name = "mhi-shared-dev"
+resolve_s3 = true
+s3_prefix = "mhi-shared-dev"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "Environment=\"dev\""
+image_repositories = []
+
+[prod.deploy.parameters]
+stack_name = "mhi-shared-prod"
+resolve_s3 = true
+s3_prefix = "mhi-shared-prod"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "Environment=\"prod\""
+image_repositories = []
