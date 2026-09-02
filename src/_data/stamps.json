@@ -56,6 +56,22 @@
     "url": "https://weather-ahead.com"
   },
     {
+    "slug": "prioritization",
+    "name": "Prioritization",
+    "stage": "idea",
+    "icon": {
+      "type": "image",
+      "src": "/img/logos/reminder.png",
+      "scale": "76%"
+    },
+    "color": "#5b6ea8",
+    "top": "10px",
+    "left": "70%",
+    "blurb": "so many ideas, so little time",
+    "backstory": "the thing about ideas is they are like rabbits, they make more little ideas.  I need a way to keep track of them and decide which ones to pursue.",
+    "url": ""
+  },
+    {
     "slug": "cozy-mysteries",
     "name": "Cozy Mysteries",
     "stage": "idea",

@@ -20,7 +20,7 @@ body{
   min-height:100vh;
 }
 .desk{
-  padding:clamp(50px, 8vw, 80px) clamp(16px, 4vw, 25px) 60px;
+  padding:clamp(36px, 6vw, 60px) clamp(16px, 4vw, 25px) 60px;
   position:relative;
 }
 h1{
@@ -34,22 +34,41 @@ h1 a{
   color:inherit;
   text-decoration:none;
 }
-.tagline{
+.intro{
+  display:grid;
+  grid-template-columns:clamp(96px, 12vw, 120px) minmax(0, 1fr);
+  gap:clamp(12px, 2vw, 20px);
+  align-items:start;
+}
+.portrait{
+  width:100%;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+  object-position:center;
+  border:1px solid var(--rule);
+  background:var(--paper-2);
+  padding:5px;
+  filter:sepia(0.22) saturate(0.55) contrast(0.9);
+  box-shadow:0 1px 3px rgba(43,42,40,0.12);
+  order:-1;
+}
+.tagline-group{
+  margin-bottom:30px;
+  max-width:min(480px, 90%);
+}
+.tagline-line{
   font-style:italic;
   color:var(--ink-soft);
   font-size:clamp(0.95rem, 2vw, 1.225rem);
-  margin:0 0 10px;
-  max-width:min(480px, 90%);
+  margin:0;
   line-height:1.6;
-}
-.tagline:last-of-type{
-  margin-bottom:30px;
 }
 .bio{
   font-size:1.05rem;
   line-height:1.7;
   color:var(--ink-soft);
   max-width:min(640px, 92%);
+  margin-top:clamp(18px, 3vw, 30px);
   margin-bottom:60px;
 }
 .field{
@@ -271,6 +290,15 @@ h1 a{
 
 @media (max-width:900px){
   .layout{ grid-template-columns:1fr; }
+  .intro{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .portrait{
+    width:min(120px, 36vw);
+    justify-self:center;
+    order:-1;
+  }
   .field{
     height:auto;
     display:flex;
