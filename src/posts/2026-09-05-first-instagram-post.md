@@ -10,9 +10,9 @@ permalink: "/posts/first-insta-post/"
 
 Today was to be the day of my first Instagram post.  MHI's (marjoriehasideas) launch into the world.  I got my profile set up and set about to doing a few followings to get a sense of things.  Coach Bennett was my first follow.  I became a runner with his and Andy Puddicombe's voices in my ears.  Next were a few web designers and AI gurus.  
 
-And then. I realized. Oh, no! My website looked like every other Claude-code generated site.
+And then. I realized. **Oh, no!** My website looked like every other Claude-code generated site.
 
-Full transparency, all of my apps are vibe-coded, but each one has a unique look and feel and is mine.  But the one that should be the most uniquely mine, I even gave it my name, wasn't.
+Full transparency, all of my apps are vibe-coded, but each one has a unique look and feel and is mine. My running app color theme matches the colors I like to wear when I run, the logo is an icon of me running.  My weather app has a logo I designed and colors that make me think of weather.  But the one that should be the most uniquely mine, such that I even gave it my name, wasn't.
 
 So back into VS Code I went, with a palette of Deep Winter colors to choose from.  I am a deep winter and it's reflected in what I wear.  I had my pencil sketch, which should be uniquely me, but it was placed and bordered in a way that screamed "AI made this", instead of quietly saying "this is Marjorie".  Over a couple of hours chatting with ChatGPT, we made the site 25% less Claude and 25% more Marjorie.  
 
