@@ -1,6 +1,6 @@
 <div class="stamp" data-stage="{{ stamp.stage }}" style="top:{{ stamp.top }}; left:{{ stamp.left }}; color:{{ stamp.color }}; {% if stamp.ringColor %}--ring-color:{{ stamp.ringColor }};{% endif %} {% if stamp.bgColor %}--stamp-bg:{{ stamp.bgColor }};{% endif %}">
   {% if stamp.icon.type == "image" %}
-    <span class="icon-badge"{% if stamp.colors or stamp.icon.scale %} style="{% if stamp.colors %}background:linear-gradient(135deg, {{ stamp.colors.gradientStart }}, {{ stamp.colors.gradientEnd }});{% endif %}{% if stamp.icon.scale %}--icon-scale:{{ stamp.icon.scale }};{% endif %}"{% endif %}>
+    <span class="icon-badge"{% if stamp.bgColor or stamp.icon.scale %} style="{% if stamp.bgColor %}background:{{ stamp.bgColor }};{% endif %}{% if stamp.icon.scale %}--icon-scale:{{ stamp.icon.scale }};{% endif %}"{% endif %}>
       <img src="{{ stamp.icon.src }}" alt="{{ stamp.name }} logo" style="object-fit:{{ stamp.icon.fit or 'contain' }}; object-position:{{ stamp.icon.position or 'center' }};">
     </span>
   {% else %}

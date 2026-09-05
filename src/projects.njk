@@ -11,7 +11,7 @@ eleventyComputed:
 <div class="page">
   <a class="back" href="/">← marjoriehasideas</a>
   {% if stamp.icon.type == "image" %}
-    <span class="icon-badge project-icon"{% if stamp.colors %} style="background:linear-gradient(135deg, {{ stamp.colors.gradientStart }}, {{ stamp.colors.gradientEnd }});"{% endif %}>
+    <span class="icon-badge project-icon"{% if stamp.bgColor %} style="background:{{ stamp.bgColor }};"{% endif %}>
       <img src="{{ stamp.icon.src }}" alt="{{ stamp.name }} logo" style="object-fit:{{ stamp.icon.fit or 'contain' }}; object-position:{{ stamp.icon.position or 'center' }};">
     </span>
   {% endif %}
